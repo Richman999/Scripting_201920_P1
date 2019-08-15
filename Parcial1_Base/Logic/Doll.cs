@@ -7,6 +7,10 @@ namespace Parcial1_Base.Logic
     /// </summary>
     public class Doll : IClonable<Doll>
     {
+        private bool hayVestido = false;
+        private bool hayCollar = false;
+        private Dress cloneDress;
+        
         /// <summary>
         /// The accessories collection.
         /// </summary>
@@ -37,6 +41,7 @@ namespace Parcial1_Base.Logic
         public Doll(string name)
         {
             Name = name;
+
         }
 
         /// <summary>
@@ -58,7 +63,31 @@ namespace Parcial1_Base.Logic
         /// <returns>True if the doll successfully wore the accessory. False otherwise</returns>
         public bool Wear(Accessory a)
         {
-            return false;
+            if (a is Dress && hayVestido == false)
+            {
+                accessories.Add(a);
+                cloneDress = a as Dress;
+                hayVestido = true;
+                return true;
+            }
+            else if(a is Necklace && hayVestido == true && hayCollar == false)
+            {
+                accessories.Add(a);
+                hayCollar = true;
+                return true;
+            }else if (a is Purse && hayVestido == true)
+            {
+               /* if (cloneDress.Color == cloneDress.EColor.White && cloneDress.Color == cloneDress.EColor.Black)
+                {
+
+                }*/
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         /// <summary>
