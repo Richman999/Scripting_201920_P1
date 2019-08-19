@@ -1,0 +1,21 @@
+Feedback
+
+* Hay errores de compilación en Dress.cs. Los enumerados no se usan así. Además qué objeto tenían esos métodos, si esos atributos se asignaban en editor?
+* No hay lógica que satisfaga que en el concurso puedan haber hasta 4 concursantes distintas (0.0 / 0.25)
+* No hay lógica para determinar a la concursante ganadora. (0.0 / 0.25)
+* No hay lógica para determinar que una concursante pueda participar si tiene un vestido equipado (0.0 / 0.5)
+* Hay lógica para equipar accesorios, pero no se contemplan los collares.
+* Hay lógica para determinar si se está equipando un vestido al tener ya uno equipado (0.25 / 0.25)
+* Se equipan los collares, pero no hay lógica para determinar que un collar puede equiparse con ciertos vestidos (0.1 / 0.25)
+* No hay lógica para incrementar el puntaje de estilo que da un bolso si es equipado con ciertos vestidos (0.0 / 0.25)
+* No hay lógica que limite las pulseras según el vestido equipado (0.0 / 1.0)
+* No hay lógica de desequipamiento de accesorios (0.0 / 0.25); en consecuencia, tampoco hay lógica que desequipe todos los accesorios si el vestido es desequipado (0.0 / 0.5)
+
+Total funcionalidad: 0.35 / 3.5
+
+* Dado que no hay lógica que satisfaga la funcionalidad, no puede haber consideración al diseño orientado a objetos aplicado (0.0 / 1.5)
+
+Total diseño orientado a objetos: 0.0 / 1.5
+
+
+Total: (0.35 / 5.0)
